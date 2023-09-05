@@ -15,10 +15,10 @@ export function buildWebpackConfig(
     mode,
     entry: paths.entry,
     output: {
-      filename: 'static/[name].[contenthash].js',
+      filename: '[name].[contenthash].js',
       path: paths.build,
       clean: true,
-      publicPath: '/',
+      publicPath: isDev ? '/' : './',
     },
     plugins: buildPlugins(options),
     module: {

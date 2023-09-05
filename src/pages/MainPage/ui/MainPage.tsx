@@ -7,7 +7,7 @@ const MainPage = () => {
     setValue(val);
   };
 
-  return <div>1</div>;
+  return <h1>Test</h1>;
 };
 
 export default MainPage;
