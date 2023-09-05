@@ -17,8 +17,8 @@ export function buildPlugins({
     }),
     new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin({
-      filename: '/static/css/[name].[contenthash:8].css',
-      chunkFilename: '/static/css/[name].[contenthash:8].css',
+      filename: 'static/css/[name].[contenthash:8].css',
+      chunkFilename: 'static/css/[name].[contenthash:8].css',
     }),
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),

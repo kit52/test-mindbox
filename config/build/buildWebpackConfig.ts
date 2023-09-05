@@ -15,7 +15,7 @@ export function buildWebpackConfig(
     mode,
     entry: paths.entry,
     output: {
-      filename: '/static/[name].[contenthash].js',
+      filename: 'static/[name].[contenthash].js',
       path: paths.build,
       clean: true,
       publicPath: '/',
