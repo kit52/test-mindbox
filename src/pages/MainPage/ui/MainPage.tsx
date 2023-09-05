@@ -1,18 +1,13 @@
 import React, { useState } from 'react';
 
 const MainPage = () => {
-    
-    const [value, setValue] = useState('');
+  const [value, setValue] = useState('');
 
-    const onChange = (val: string) => {
-        setValue(val);
-    };
+  const onChange = (val: string) => {
+    setValue(val);
+  };
 
-    return (
-        <div>
-          f
-        </div>
-    );
+  return <div>1</div>;
 };
 
 export default MainPage;
