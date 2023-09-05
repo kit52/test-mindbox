@@ -1,11 +1,14 @@
+import Container from '@mui/material/Container';
 import { MainPage } from 'pages/MainPage';
 import React, { Suspense, useEffect } from 'react';
 
 function App() {
   return (
-    <div>
+    <div style={{ background: '#cfe8fc', height: '100vh' }}>
       <Suspense fallback="">
-        <MainPage />
+        <Container maxWidth="sm">
+          <MainPage />
+        </Container>
       </Suspense>
     </div>
   );

@@ -51,10 +51,8 @@
     "file-loader": "^6.2.0",
     "gh-pages": "^6.0.0",
     "html-webpack-plugin": "^5.5.0",
-    "husky": "^7.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
-    "loki": "^0.28.1",
     "mini-css-extract-plugin": "^2.5.3",
     "react-refresh": "^0.12.0",
     "reg-cli": "^0.17.6",
@@ -73,12 +71,17 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
-    "@mui/material": "^5.14.7",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.8",
+    "@mui/material": "^5.14.8",
     "@mui/styled-engine-sc": "^5.14.7",
     "axios": "^0.26.1",
+    "mobx": "^6.10.2",
+    "mobx": "^6.9.0",
+    "mobx-react-lite": "^3.4.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
     "styled-components": "^5.3.11"
   }

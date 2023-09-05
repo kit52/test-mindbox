@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import { observer } from 'mobx-react-lite';
+import { TabsCustom } from './TabsCustom/TabsCustom';
 
-const MainPage = () => {
-  const [value, setValue] = useState('');
-
-  const onChange = (val: string) => {
-    setValue(val);
-  };
-
-  return <h1>Test</h1>;
-};
+const MainPage = observer(() => {
+  return (
+    <div>
+      <h1>Todos</h1>
+      <TabsCustom />
+    </div>
+  );
+});
 
 export default MainPage;
