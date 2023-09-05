@@ -7,14 +7,14 @@ const defaultTask = [
   { checked: false, text: '3 задача', id: '3' },
 ];
 class State {
-  input: string = '';
+  newTask: string = '';
   todos: TaskType[] = defaultTask;
   constructor() {
     makeAutoObservable(this);
   }
 
-  changeInput(text: string) {
-    this.input = text;
+  changeNewTask(text: string) {
+    this.newTask = text;
   }
   get incompleteTodos() {
     return this.todos.filter((todo) => !todo.checked);
@@ -32,11 +32,15 @@ class State {
   createTask() {
     const task: TaskType = {
       checked: false,
-      text: '',
+      text: this.newTask,
       id: crypto.randomUUID(),
     };
     this.todos.push(task);
+    this.newTask = '';
   }
+  removeTask = (id: string) => {
+    this.todos = this.todos.filter((item) => item.id !== id);
+  };
 }
 
 export default new State();

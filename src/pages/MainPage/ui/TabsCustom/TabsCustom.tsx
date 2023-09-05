@@ -6,13 +6,13 @@ import { TasksList } from 'entities/Task/ui/TasksList/TasksList';
 import State from '../../model/store';
 import { observer } from 'mobx-react-lite';
 export const TabsCustom = observer(() => {
-  const toggleTodo = useCallback(
-    (id: string) => {
-      State.toggleTodo(id);
-    },
-    [State.toggleTodo]
-  );
-  console.log(State.todos);
+  const toggleTodo = (id: string) => {
+    State.toggleTodo(id);
+  };
+  const removeTask = (id: string) => {
+    State.removeTask(id);
+  };
+
   return (
     <Tabs defaultValue={0}>
       <StyledTabsList>
@@ -21,13 +21,25 @@ export const TabsCustom = observer(() => {
         <StyledTab value={2}>Completed</StyledTab>
       </StyledTabsList>
       <StyledTabPanel value={0}>
-        <TasksList tasks={State.todos} toggleTask={toggleTodo} />
+        <TasksList
+          tasks={State.todos}
+          toggleTask={toggleTodo}
+          removeTask={removeTask}
+        />
       </StyledTabPanel>
       <StyledTabPanel value={1}>
-        <TasksList tasks={State.incompleteTodos} toggleTask={toggleTodo} />
+        <TasksList
+          tasks={State.incompleteTodos}
+          toggleTask={toggleTodo}
+          removeTask={removeTask}
+        />
       </StyledTabPanel>
       <StyledTabPanel value={2}>
-        <TasksList tasks={State.completeTodos} toggleTask={toggleTodo} />
+        <TasksList
+          tasks={State.completeTodos}
+          toggleTask={toggleTodo}
+          removeTask={removeTask}
+        />
       </StyledTabPanel>
     </Tabs>
   );
